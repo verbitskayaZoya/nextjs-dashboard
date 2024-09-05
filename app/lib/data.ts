@@ -11,7 +11,9 @@ import { formatCurrency } from './utils';
 
 export async function fetchRevenue() {
   try {
+   
     const data = await sql<Revenue>`SELECT * FROM revenue`;
+ 
     return data.rows;
   } catch (error) {
     console.error('Database Error:', error);
